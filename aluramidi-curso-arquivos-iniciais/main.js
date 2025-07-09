@@ -1,62 +1,17 @@
-function playPomAudio()
+const keysList = document.querySelectorAll( '.tecla' );
+ 
+for ( let i = 0; i < keysList.length; i++ )
 {
-    document.querySelector( '#som_tecla_pom' ).play();
+    const key = keysList[ i ];
+
+    const className = key.classList[ 1 ];
+
+    key.onclick = function ()
+    {
+        playAudio( "#som_" + className );
+    }
 }
-
-document.querySelector( '.tecla_pom' ).onclick = playPomAudio;
-
-function playClapAudio()
+function playAudio( idElementAudio )
 {
-    document.querySelector( '#som_tecla_clap' ).play();
+    document.querySelector( idElementAudio ).play();
 }
-
-document.querySelector( '.tecla_clap' ).onclick = playClapAudio;
-
-function playTimAudio()
-{
-    document.querySelector( '#som_tecla_tim' ).play();
-}
-
-document.querySelector( '.tecla_tim' ).onclick = playTimAudio;
-
-function playPuffAudio()
-{
-    document.querySelector( '#som_tecla_puff' ).play();
-}
-
-document.querySelector( '.tecla_puff' ).onclick = playPuffAudio;
-
-function playSplashAudio()
-{
-    document.querySelector( '#som_tecla_splash' ).play();
-}
-
-document.querySelector( '.tecla_splash' ).onclick = playSplashAudio;
-
-function playToimAudio()
-{
-    document.querySelector( '#som_tecla_toim' ).play();
-}
-
-document.querySelector( '.tecla_toim' ).onclick = playToimAudio;
-
-function playPshAudio()
-{
-    document.querySelector( '#som_tecla_psh' ).play();
-}
-
-document.querySelector( '.tecla_psh' ).onclick = playPshAudio;
-
-function playTicAudio()
-{
-    document.querySelector( '#som_tecla_tic' ).play();
-}
-
-document.querySelector( '.tecla_tic' ).onclick = playTicAudio;
-
-function playTomAudio()
-{
-    document.querySelector( '#som_tecla_tom' ).play();
-}
-
-document.querySelector( '.tecla_tom' ).onclick = playTomAudio;
