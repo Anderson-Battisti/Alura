@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Alura.iml" filepath="$PROJECT_DIR$/.idea/Alura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaReflectionSimplifyObjectConversion/my-project.iml" filepath="$PROJECT_DIR$/JavaReflectionSimplifyObjectConversion/my-project.iml" />
     </modules>
   </component>
 </project>

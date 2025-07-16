@@ -4,17 +4,11 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/Maven Project/pom.xml" />
-        <option value="$PROJECT_DIR$/JavaReflectionSimplifyObjectConversion/pom.xml" />
+        <option value="$PROJECT_DIR$/alura-transformator/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/Maven Project/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_23" default="true" project-jdk-name="23" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/JavaReflectionSimplifyObjectConversion/out" />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
