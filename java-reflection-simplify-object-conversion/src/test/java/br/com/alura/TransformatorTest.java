@@ -1,8 +1,6 @@
 package br.com.alura;
 
-import br.com.alura.domain.Address;
-import br.com.alura.domain.Person;
-import br.com.alura.domain.PersonDTO;
+import br.com.alura.reflection.Transformator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

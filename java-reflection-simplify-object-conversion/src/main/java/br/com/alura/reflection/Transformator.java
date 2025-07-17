@@ -1,4 +1,4 @@
-package br.com.alura;
+package br.com.alura.reflection;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
