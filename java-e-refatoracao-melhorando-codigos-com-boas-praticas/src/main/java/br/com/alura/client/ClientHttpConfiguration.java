@@ -22,7 +22,7 @@ public class ClientHttpConfiguration
         return client.send( request, HttpResponse.BodyHandlers.ofString() );
     }
 
-    public HttpResponse<String> firePostRequest(String uri, Object object ) throws IOException, InterruptedException
+    public HttpResponse<String> firePostRequest( String uri, Object object ) throws IOException, InterruptedException
     {
         HttpClient client = HttpClient.newHttpClient();
 

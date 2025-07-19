@@ -2,15 +2,14 @@ package br.com.alura.service;
 
 import br.com.alura.client.ClientHttpConfiguration;
 import br.com.alura.domain.Pet;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.http.HttpResponse;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class PetService
@@ -37,19 +36,17 @@ public class PetService
         }
 
         String    responseBody = response.body();
-        JsonArray jsonArray    = JsonParser.parseString( responseBody ).getAsJsonArray();
+        List<Pet> pets = Arrays.stream( new ObjectMapper().readValue( responseBody, Pet[].class ) ).toList();
 
         System.out.println( "Pets cadastrados:" );
 
-        for ( JsonElement element : jsonArray )
+        for ( Pet pet : pets )
         {
-            JsonObject jsonObject = element.getAsJsonObject();
-
-            long   id    = jsonObject.get( "id" )   .getAsLong();
-            String type  = jsonObject.get( "tipo" ) .getAsString();
-            String name  = jsonObject.get( "nome" ) .getAsString();
-            String breed = jsonObject.get( "raca" ) .getAsString();
-            int    age   = jsonObject.get( "idade" ).getAsInt();
+            long   id    = pet.getId();
+            String type  = pet.getType();
+            String name  = pet.getName();
+            String breed = pet.getBreed();
+            int    age   = pet.getAge();
 
             System.out.println( id + " - " + type + " - " + name + " - " + breed + " - " + age + " ano(s)" );
         }

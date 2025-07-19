@@ -3,15 +3,18 @@ package br.com.alura.domain;
 public class Shelter
 {
     private long   id;
-    private String name;
-    private String telephone;
+    private String nome;
+    private String telefone;
     private String email;
+    private Pet[] pets;
+
+    public Shelter() {}
 
     public Shelter( String name, String telephone, String email )
     {
-        this.name      = name;
-        this.telephone = telephone;
-        this.email     = email;
+        this.nome     = name;
+        this.telefone = telephone;
+        this.email    = email;
     }
 
     public long getId()
@@ -21,17 +24,22 @@ public class Shelter
 
     public String getName()
     {
-        return name;
+        return nome;
     }
 
     public String getTelephone()
     {
-        return telephone;
+        return telefone;
     }
 
     public String getEmail()
     {
         return email;
+    }
+
+    public Pet[] getPets()
+    {
+        return pets;
     }
 }
 

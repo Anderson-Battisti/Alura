@@ -2,12 +2,15 @@ package br.com.alura.domain;
 
 public class Pet
 {
+    private Long   id;
     private String type;
     private String name;
     private String breed;
     private int    age;
     private String color;
     private float  weight;
+
+    public Pet() {}
 
     public Pet( String type, String name, String breed, int age, String color, float weight )
     {
@@ -17,5 +20,30 @@ public class Pet
         this.age    = age;
         this.color  = color;
         this.weight = weight;
+    }
+
+    public Long getId()
+    {
+        return id;
+    }
+
+    public String getType()
+    {
+        return type;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public String getBreed()
+    {
+        return breed;
+    }
+
+    public int getAge()
+    {
+        return age;
     }
 }
