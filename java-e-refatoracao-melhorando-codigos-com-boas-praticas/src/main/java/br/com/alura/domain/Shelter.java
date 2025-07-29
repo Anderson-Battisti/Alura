@@ -22,12 +22,12 @@ public class Shelter
         return id;
     }
 
-    public String getName()
+    public String getNome()
     {
         return nome;
     }
 
-    public String getTelephone()
+    public String getTelefone()
     {
         return telefone;
     }

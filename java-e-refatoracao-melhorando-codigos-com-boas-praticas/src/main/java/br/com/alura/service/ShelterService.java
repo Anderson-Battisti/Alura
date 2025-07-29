@@ -33,7 +33,7 @@ public class ShelterService
         for ( Shelter shelter : shelterList )
         {
             long   id   = shelter.getId();
-            String name = shelter.getName();
+            String name = shelter.getNome();
 
             System.out.println( id + " - " + name );
         }
