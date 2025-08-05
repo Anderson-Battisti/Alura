@@ -30,11 +30,11 @@ public class ValidacaoTutorComAdocaoEmAndamento
         Tutor tutor = tutorRepository.getReferenceById( dto.idTutor() );
         
         for ( Adocao adocao : adocoes ) 
+        {
+            if ( adocao.getTutor() == tutor && adocao.getStatus() == StatusAdocao.AGUARDANDO_AVALIACAO )
             {
-                if ( adocao.getTutor() == tutor && adocao.getStatus() == StatusAdocao.AGUARDANDO_AVALIACAO ) 
-                {
-                    throw new ValidacaoException( "Tutor já possui outra adoção aguardando avaliação!" );
-                }
+                throw new ValidacaoException( "Tutor já possui outra adoção aguardando avaliação!" );
             }
+        }
     }
 }
